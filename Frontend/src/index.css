@@ -1,0 +1,222 @@
+/* ==========================================================================
+   Virtual CSE Lab — Design System & Global Styles
+   Sharp, Technical, Modern Educational Laboratory Aesthetic
+   ========================================================================== */
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, Monaco, monospace;
+
+  /* Surfaces & Backgrounds */
+  --bg-app: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-subtle: #f1f5f9;
+  --bg-code: #0b0f19;
+  --bg-code-line: #111827;
+  --bg-code-active: #1e1b4b;
+
+  /* Borders */
+  --border-subtle: #e2e8f0;
+  --border-medium: #cbd5e1;
+  --border-focus: #4f46e5;
+
+  /* Text Colors */
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --text-subtle: #94a3b8;
+  --text-inverse: #ffffff;
+
+  /* Brand & Accents */
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-primary-subtle: #eef2ff;
+
+  /* Algorithm Visual Semantics */
+  --color-default-bg: #f8fafc;
+  --color-default-border: #cbd5e1;
+  --color-default-bar: #94a3b8;
+
+  --color-comparing-bg: #fef3c7;
+  --color-comparing-border: #f59e0b;
+  --color-comparing-text: #92400e;
+  --color-comparing-bar: #f59e0b;
+
+  --color-swapping-bg: #ffe4e6;
+  --color-swapping-border: #f43f5e;
+  --color-swapping-text: #9f1239;
+  --color-swapping-bar: #f43f5e;
+
+  --color-candidate-bg: #ede9fe;
+  --color-candidate-border: #8b5cf6;
+  --color-candidate-text: #5b21b6;
+  --color-candidate-bar: #8b5cf6;
+
+  --color-locked-bg: #d1fae5;
+  --color-locked-border: #10b981;
+  --color-locked-text: #065f46;
+  --color-locked-bar: #10b981;
+
+  /* Technical Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 2px 4px -1px rgb(0 0 0 / 0.06);
+
+  /* Sharp Technical Corners (not rounded) */
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  border-radius: var(--radius-sm);
+  transition: all 0.12s ease-in-out;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 13px;
+  border-radius: var(--radius-sm);
+}
+
+/* App container */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 12px 16px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Grid layout for main workspace */
+.workspace-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 12px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .workspace-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Base Sharp Card */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 12px 14px;
+}
+
+.compact-card {
+  padding: 10px 12px;
+}
+
+.compact-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.compact-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Sharp Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.compact-badge {
+  padding: 1px 5px;
+  font-size: 10px;
+}
+
+.badge-primary {
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  border: 1px solid rgba(79, 70, 229, 0.25);
+}
+
+.badge-comparing {
+  background: var(--color-comparing-bg);
+  color: var(--color-comparing-text);
+  border: 1px solid var(--color-comparing-border);
+}
+
+.badge-swapping {
+  background: var(--color-swapping-bg);
+  color: var(--color-swapping-text);
+  border: 1px solid var(--color-swapping-border);
+}
+
+.badge-candidate {
+  background: var(--color-candidate-bg);
+  color: var(--color-candidate-text);
+  border: 1px solid var(--color-candidate-border);
+}
+
+.badge-locked {
+  background: var(--color-locked-bg);
+  color: var(--color-locked-text);
+  border: 1px solid var(--color-locked-border);
+}
+
+.badge-neutral {
+  background: var(--bg-card-subtle);
+  color: var(--text-muted);
+  border: 1px solid var(--border-medium);
+}
