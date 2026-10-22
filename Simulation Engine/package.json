@@ -1,0 +1,31 @@
+{
+  "name": "virtual-cse-lab-simulation-engine",
+  "version": "0.1.0",
+  "description": "Deterministic core simulation engine for Virtual CSE Laboratory platform",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "keywords": [
+    "simulation-engine",
+    "virtual-lab",
+    "algorithms",
+    "bubble-sort",
+    "deterministic-replay"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^5.0.5",
+    "vitest": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

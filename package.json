@@ -1,0 +1,27 @@
+{
+  "name": "virtual-cse-lab",
+  "version": "1.0.0",
+  "description": "Virtual CSE Lab — Educational Algorithm Visual Simulation Platform",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node start.js",
+    "dev": "node start.js",
+    "test": "node test-all.js",
+    "test:all": "node test-all.js",
+    "install:all": "npm install --prefix \"Simulation Engine\" && npm install --prefix Frontend && npm install --prefix Backend",
+    "build:frontend": "npm run build --prefix Frontend"
+  },
+  "keywords": [
+    "virtual-lab",
+    "cse",
+    "algorithm-visualization",
+    "bubble-sort",
+    "selection-sort",
+    "react",
+    "vite",
+    "express"
+  ],
+  "author": "Virtual CSE Lab Team",
+  "license": "UNLICENSED"
+}
